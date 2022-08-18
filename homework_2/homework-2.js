@@ -45,8 +45,9 @@ function selectFromInterval(inputsArr, x, y) {
 
 const myIterable = { from: 1, to: 4 };
 
-myIterable[Symbol.iterator] = function() {
-  let { from, to } = this;
+myIterable[Symbol.iterator] = function () {
+  const { to } = this;
+  let { from } = this;
 
   if ((!from || !to) || (to < from) || (typeof from !== 'number' || typeof to !== 'number')) {
     throw new Error('Incorrect input');
@@ -62,3 +63,7 @@ myIterable[Symbol.iterator] = function() {
     }
   };
 };
+
+for (const char of myIterable) {
+  console.log(char);
+}

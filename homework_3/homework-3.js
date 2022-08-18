@@ -2,11 +2,13 @@
 
 // Task-1_myFilter
 
-Array.prototype.myFilter = function (callback, contextObject = {}) {
+Array.prototype.myFilter = function(callback, contextObject = {}) {
   const filteredArr = [];
 
   for (let i = 0; i < this.length; i++) {
-    if (callback.call(contextObject, this[i], i, this)) {
+    const isTrueCondition = callback.call(contextObject, this[i], i, this);
+
+    if (isTrueCondition) {
       filteredArr.push(this[i]);
     }
   }

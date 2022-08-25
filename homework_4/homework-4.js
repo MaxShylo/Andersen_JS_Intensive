@@ -52,13 +52,13 @@ class Calculator {
 
   setX(num) {
     isValidNum(num);
-    
+
     return (this.x = num);
   }
 
   setY(num) {
     isValidNum(num);
-    
+
     return (this.y = num);
   }
 
@@ -82,7 +82,7 @@ class Calculator {
 
   logDiv() {
     const { x, y } = this;
-    
+
     if (y === 0) {
       throw new Error('Cannot be divided by 0!!!');
     }

@@ -28,9 +28,9 @@ class Stack {
     const arrDataIterable = [...iterable];
     const stackFromIterable = new Stack(arrDataIterable.length);
 
-    arrDataIterable.forEach((elem) => {
+    for (const elem of arrDataIterable) {
       stackFromIterable.push(elem);
-    })
+    }
 
     return stackFromIterable;
   }

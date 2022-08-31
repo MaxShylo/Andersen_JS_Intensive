@@ -87,3 +87,5 @@ class Stack {
     return arrData;
   }
 }
+
+module.exports = { Stack };
